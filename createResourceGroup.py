@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-resource_group_name = "myResourceGroup"
+resource_group_name = "myResourceGroup1"
 location = "EastUS"  # Update the region as per your requirement
 
 def login_to_azure():

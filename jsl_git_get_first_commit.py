@@ -1,5 +1,5 @@
 #### jsl_git_get_first_commit.py
-```python
+
 import subprocess
 
 def jsl_git_get_first_commit():
@@ -9,4 +9,4 @@ def jsl_git_get_first_commit():
         stdout=subprocess.PIPE
     )
     return result.stdout.decode().strip()
-```
+

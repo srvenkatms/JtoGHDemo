@@ -33,8 +33,14 @@ jobs:
     - name: Prepare Python Script
       run: |
         python createResourceGroup.py
+        python jsl_git_get_first_commit.py
 
     - name: Execute Python Script
       run: |
         chmod +x createResourceGroup.py
         python createResourceGroup.py
+
+    - name: Generate Release Change Log
+      run: |
+        first_commit=$(python -c 'from jsl_git_get_first_commit import jsl_git_get_first_commit; print(jsl_git_get_first_commit())')
+        echo "First commit hash: $first_commit"
